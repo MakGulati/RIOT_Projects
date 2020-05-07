@@ -1,4 +1,4 @@
-include ../Makefile.my_common
+include ../Makefile.common
 #include ../Makefile.iotlab
 
 # The following boards are known to fail or have not been tested.

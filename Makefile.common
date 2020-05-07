@@ -3,10 +3,10 @@ APPLICATION ?= tests_$(notdir $(patsubst %/,%,$(CURDIR)))
 #BOARD ?= nucleo-l476rg
 #BOARD ?= nucleo-f103rb
 #BOARD ?= stm32f4discovery
-#BOARD = native
-BOARD=iotlab-m3
-#RIOTBASE ?= $(CURDIR)/../RIOT
-RIOTBASE ?= /home/maksim/code/RIOT
+BOARD = native
+#BOARD=iotlab-m3
+RIOTBASE ?= $(CURDIR)/../RIOT
+#RIOTBASE ?= /path/to/RIOT
 QUIET ?= 1
 # DEVELHELP enabled by default for all tests, set 0 to disable
 DEVELHELP ?= 1
