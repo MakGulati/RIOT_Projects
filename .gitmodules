@@ -1,0 +1,3 @@
+[submodule "local_clones/relic"]
+	path = local_clones/relic
+	url = https://github.com/maksim-ka/relic
