@@ -7,8 +7,15 @@
   git clone --recurse-submodules https://github.com/maksim-ka/RIOT_Projects
   cd RIOT_Projects
   ```
-* move into a project folder, e.g. `cd relic_bench-native`
+  * for getting latest commits of submodules
+  ```
+  git submodule update --remote --merge
+  ```
+* move into a project folder, e.g.: 
+  ```
+  cd relic_bench-native
+  ```
 
 * In the project folder run the following commands:
-  *   `make` to compile
-  *  `make flash term` to run (term is for the output)
+  *  `make` to compile
+  *  `make flash term` to run (_`term`_ is for the output)
