@@ -1,6 +1,8 @@
 [submodule "local_clones/relic"]
 	path = local_clones/relic
 	url = https://github.com/maksim-ka/relic
+	branch = relic-bench-native_riot
 [submodule "RIOT"]
 	path = RIOT
 	url = https://github.com/maksim-ka/RIOT
+	branch = relic-bench
