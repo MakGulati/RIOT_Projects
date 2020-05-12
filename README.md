@@ -19,3 +19,10 @@
 * In the project folder run the following commands:
   *  `make` to compile
   *  `make flash term` to run (_`term`_ is for the output)
+
+## relic_bench-native
+Running relic's native benchmarks under riot
+
+* In the project folder are two interessting scripts 
+  *  `log-bench-to-file.sh` to run and store the logs in bench-output
+  *  `parse-bench-log.py <log-file>` to parse the log to a csv (run it with --help for more )
