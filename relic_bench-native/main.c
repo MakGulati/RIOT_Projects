@@ -6,6 +6,8 @@
  * directory for more details.
  */
 
+#include <periph/pm.h>
+
 #define BENCHMARK (10) /**< set number of Benchmarks - !multible of 10!*/ 
 
 #define SHOW_OUTPUT (1) /**< set if encoded/decoded string is displayed */
@@ -70,11 +72,11 @@ util_print("** Benchmarking options:\n");
 		sokaka();//IBE
 		ibe();//IBE-bf
 		bgn();//HE
-		// bls();
-		// bbs();
-		// cls();
-		// pss();
-		// zss();
+		//bls();
+		//bbs();
+		//cls();
+		//pss();
+		//zss();
 		//lhs();//linear multi key HE signature
 	} else {
 		THROW(ERR_NO_CURVE);
@@ -83,5 +85,6 @@ util_print("** Benchmarking options:\n");
 
 	util_banner("FINISHED", 0);
 	core_clean();
+	pm_off();
 	return 0;
 }
