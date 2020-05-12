@@ -281,7 +281,8 @@ void bench_after(void) {
 #if defined(MODULE_XTIMER)
 	core_get()->after = xtimer_now_usec();
 	result = (ctx->after - ctx->before);
-	util_print("after result: %09" PRIu32 " microsec", result);
+	//Debug
+	//util_print("after result: %08" PRIu32 " microsec", result);
 #elif OPSYS == DUINO && TIMER == HREAL
 	core_get()->after = micros();
 	result = (ctx->after - ctx->before);
@@ -330,7 +331,7 @@ void subbench_print(void) {
 
 #if TIMER == POSIX || TIMER == ANSI || (OPSYS == DUINO && TIMER == HREAL)
 //	util_print("%lld microsec", ctx->total - oldTotal);
-	util_print("%09" PRIu32 " microsec", ctx->total-oldTotal);
+	util_print("%08" PRIu32 " microsec", ctx->total-oldTotal);
 	oldTotal = ctx->total;
 #elif TIMER == CYCLE
 	util_print("%lld cycles", total - after);
@@ -349,7 +350,7 @@ void bench_print(void) {
 
 #if TIMER == POSIX || TIMER == ANSI || (OPSYS == DUINO && TIMER == HREAL)
 	//util_print("%lld microsec", ctx->total);
-	util_print("%09" PRIu32 " microsec", ctx->total);
+	util_print("%08" PRIu32 " microsec", ctx->total);
 #elif TIMER == CYCLE
 	util_print("%lld cycles", total);
 #else
